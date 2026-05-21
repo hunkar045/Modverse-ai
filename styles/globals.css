@@ -1,0 +1,83 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Remove default scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(124, 58, 237, 0.05);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(124, 58, 237, 0.3);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(124, 58, 237, 0.5);
+}
+
+/* Global Animations */
+@layer utilities {
+  .animation-delay-2 {
+    animation-delay: 2s;
+  }
+
+  .animation-delay-4 {
+    animation-delay: 4s;
+  }
+
+  .glass-effect {
+    @apply bg-white/10 backdrop-blur-md border border-white/20;
+  }
+
+  .glass-dark {
+    @apply bg-space-dark/40 backdrop-blur-lg border border-white/5;
+  }
+
+  .gradient-text {
+    @apply bg-gradient-ai bg-clip-text text-transparent;
+  }
+
+  .neon-glow {
+    @apply shadow-glow-purple hover:shadow-glow-lg transition-all duration-300;
+  }
+
+  .ai-card {
+    @apply rounded-2xl glass-dark p-6 hover:border-ai-purple/50 transition-all duration-300;
+  }
+
+  .ai-button {
+    @apply px-6 py-3 rounded-lg bg-gradient-ai text-space-dark font-semibold hover:shadow-glow-purple transition-all duration-300 active:scale-95;
+  }
+
+  .ai-input {
+    @apply w-full px-4 py-2 rounded-lg bg-space-light border border-ai-purple/20 text-soft-white placeholder-text-muted focus:outline-none focus:border-ai-purple focus:shadow-glow-purple transition-all duration-300;
+  }
+}
+
+/* Smooth transitions */
+* {
+  @apply transition-colors duration-200;
+}
+
+/* Selection styling */
+::selection {
+  @apply bg-ai-purple text-soft-white;
+}
+
+/* Focus styling */
+:focus-visible {
+  @apply outline-none ring-2 ring-ai-purple ring-offset-2 ring-offset-space-dark;
+}
+
+/* Scrolling animations */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}

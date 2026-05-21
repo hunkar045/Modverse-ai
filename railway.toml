@@ -1,0 +1,20 @@
+# Railway Deployment Config
+
+Deploy to Railway using:
+1. Connect your GitHub repository
+2. Create new project on Railway.app
+3. Add PostgreSQL service
+4. Deploy branch
+
+## Environment Variables Needed:
+- DATABASE_URL (from PostgreSQL service)
+- NODE_ENV=production
+
+## Build Command:
+npm run build
+
+## Start Command:
+npm start
+
+## Ports:
+- Container Port: 3000
