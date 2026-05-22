@@ -4,7 +4,7 @@ import { NextRequest, NextResponse } from 'next/server'
 
 export async function GET(request: NextRequest) {
   try {
-    const subredditId = request.nextUrl.searchParams.get('subredditId')
+    // Removed unused variable error
 
     // TODO: Fetch alerts from database
     const alerts = [
@@ -39,7 +39,6 @@ export async function GET(request: NextRequest) {
 
 export async function POST(request: NextRequest) {
   try {
-    const alertId = request.nextUrl.pathname.split('/')[3]
     const action = request.nextUrl.searchParams.get('action')
 
     if (action === 'resolve') {
