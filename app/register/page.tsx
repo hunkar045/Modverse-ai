@@ -54,7 +54,7 @@ export default function RegisterPage() {
           <div>
             <label className="block text-sm font-medium mb-2">Full Name</label>
             <div className="relative">
-              <User className="absolute left-3 top-3 w-5 h-5 text-ai-purple/50" />
+              <User className="absolute left-3 top-2.5 w-4 h-4 text-ai-purple/50" />
               <input
                 type="text"
                 name="name"
@@ -69,7 +69,7 @@ export default function RegisterPage() {
           <div>
             <label className="block text-sm font-medium mb-2">Email</label>
             <div className="relative">
-              <Mail className="absolute left-3 top-3 w-5 h-5 text-ai-purple/50" />
+              <Mail className="absolute left-3 top-2.5 w-4 h-4 text-ai-purple/50" />
               <input
                 type="email"
                 name="email"
@@ -84,7 +84,7 @@ export default function RegisterPage() {
           <div>
             <label className="block text-sm font-medium mb-2">Password</label>
             <div className="relative">
-              <Lock className="absolute left-3 top-3 w-5 h-5 text-ai-purple/50" />
+              <Lock className="absolute left-3 top-2.5 w-4 h-4 text-ai-purple/50" />
               <input
                 type="password"
                 name="password"
@@ -99,7 +99,7 @@ export default function RegisterPage() {
           <div>
             <label className="block text-sm font-medium mb-2">Confirm Password</label>
             <div className="relative">
-              <Lock className="absolute left-3 top-3 w-5 h-5 text-ai-purple/50" />
+              <Lock className="absolute left-3 top-2.5 w-4 h-4 text-ai-purple/50" />
               <input
                 type="password"
                 name="confirmPassword"
