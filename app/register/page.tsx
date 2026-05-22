@@ -3,7 +3,7 @@
 import React, { useState } from 'react'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
-import { Mail, Lock, ArrowRight, User } from 'lucide-react'
+import { ArrowRight } from 'lucide-react'
 
 export default function RegisterPage() {
   const [formData, setFormData] = useState({
@@ -53,62 +53,50 @@ export default function RegisterPage() {
         <form onSubmit={handleSubmit} className="ai-card space-y-4">
           <div>
             <label className="block text-sm font-medium mb-2">Full Name</label>
-            <div className="relative">
-              <User className="absolute left-3 top-2.5 w-4 h-4 text-ai-purple/50" />
-              <input
-                type="text"
-                name="name"
-                value={formData.name}
-                onChange={handleChange}
-                className="ai-input pl-10"
-                placeholder="Your name"
-              />
-            </div>
+            <input
+              type="text"
+              name="name"
+              value={formData.name}
+              onChange={handleChange}
+              className="ai-input"
+              placeholder="Your name"
+            />
           </div>
 
           <div>
             <label className="block text-sm font-medium mb-2">Email</label>
-            <div className="relative">
-              <Mail className="absolute left-3 top-2.5 w-4 h-4 text-ai-purple/50" />
-              <input
-                type="email"
-                name="email"
-                value={formData.email}
-                onChange={handleChange}
-                className="ai-input pl-10"
-                placeholder="you@example.com"
-              />
-            </div>
+            <input
+              type="email"
+              name="email"
+              value={formData.email}
+              onChange={handleChange}
+              className="ai-input"
+              placeholder="you@example.com"
+            />
           </div>
 
           <div>
             <label className="block text-sm font-medium mb-2">Password</label>
-            <div className="relative">
-              <Lock className="absolute left-3 top-2.5 w-4 h-4 text-ai-purple/50" />
-              <input
-                type="password"
-                name="password"
-                value={formData.password}
-                onChange={handleChange}
-                className="ai-input pl-10"
-                placeholder="••••••••"
-              />
-            </div>
+            <input
+              type="password"
+              name="password"
+              value={formData.password}
+              onChange={handleChange}
+              className="ai-input"
+              placeholder="••••••••"
+            />
           </div>
 
           <div>
             <label className="block text-sm font-medium mb-2">Confirm Password</label>
-            <div className="relative">
-              <Lock className="absolute left-3 top-2.5 w-4 h-4 text-ai-purple/50" />
-              <input
-                type="password"
-                name="confirmPassword"
-                value={formData.confirmPassword}
-                onChange={handleChange}
-                className="ai-input pl-10"
-                placeholder="••••••••"
-              />
-            </div>
+            <input
+              type="password"
+              name="confirmPassword"
+              value={formData.confirmPassword}
+              onChange={handleChange}
+              className="ai-input"
+              placeholder="••••••••"
+            />
           </div>
 
           <motion.button
