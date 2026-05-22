@@ -37,8 +37,6 @@ export async function POST(request: NextRequest) {
 
 export async function GET(request: NextRequest) {
   try {
-    const subredditId = request.nextUrl.searchParams.get('subredditId')
-
     // TODO: Fetch moderation actions from database
     return NextResponse.json(
       {

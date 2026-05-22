@@ -4,8 +4,6 @@ import { NextRequest, NextResponse } from 'next/server'
 
 export async function GET(request: NextRequest) {
   try {
-    const subredditId = request.nextUrl.searchParams.get('subredditId')
-
     // TODO: Generate insights from AI
     const insights = [
       {
