@@ -4,8 +4,6 @@ import { NextRequest, NextResponse } from 'next/server'
 
 export async function GET(request: NextRequest) {
   try {
-    // Removed unused variable error
-
     // TODO: Fetch alerts from database
     const alerts = [
       {
