@@ -4,10 +4,6 @@
   "installCommand": "npm install --legacy-peer-deps",
   "framework": "nextjs",
   "regions": ["iad1"],
-  "env": {
-    "DATABASE_URL": "@modverse_db_url",
-    "NEXT_PUBLIC_API_URL": "@modverse_api_url"
-  },
   "functions": {
     "api/**/*.ts": {
       "memory": 1024,
