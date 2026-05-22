@@ -1,6 +1,6 @@
 // Custom hooks for ModVerse AI
 
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useRef, useCallback } from 'react'
 
 /**
  * useLocalStorage - Hook to use localStorage with React
@@ -84,9 +84,15 @@ export const useDebounce = <T,>(value: T, delay: number) => {
  * useThrottle - Hook to throttle function calls
  */
 export const useThrottle = <T extends (...args: any[]) => any>(callback: T, limit: number) => {
-  const inThrottle = useState(false)[1]
+  const inThrottle = useRef(false)
 
-  return (...args: Parameters<T>) => {
-    // Implementation in actual usage
-  }
+  return useCallback((...args: Parameters<T>) => {
+    if (!inThrottle.current) {
+      callback(...args)
+      inThrottle.current = true
+      setTimeout(() => {
+        inThrottle.current = false
+      }, limit)
+    }
+  }, [callback, limit]) as T
 }

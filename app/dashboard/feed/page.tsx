@@ -1,8 +1,7 @@
 'use client'
 
-import React from 'react'
 import { motion } from 'framer-motion'
-import { AlertCircle, CheckCircle2, Zap, MessageCircle } from 'lucide-react'
+import { AlertCircle, CheckCircle2, Zap } from 'lucide-react'
 
 const feedItems = [
   {

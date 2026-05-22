@@ -3,7 +3,7 @@
 import React, { useState } from 'react'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
-import { Mail, Lock, ArrowRight, Github, User } from 'lucide-react'
+import { Mail, Lock, ArrowRight, User } from 'lucide-react'
 
 export default function RegisterPage() {
   const [formData, setFormData] = useState({

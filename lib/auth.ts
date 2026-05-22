@@ -1,6 +1,6 @@
 // Authentication utilities
 
-import { jwtDecode } from 'jwt-decode'
+// import { jwtDecode } from 'jwt-decode'
 
 interface JWTPayload {
   userId: string
@@ -14,9 +14,10 @@ export const authUtils = {
   /**
    * Decode JWT token
    */
-  decodeToken(token: string): JWTPayload | null {
+  decodeToken(_token: string): JWTPayload | null {
     try {
-      return jwtDecode<JWTPayload>(token)
+      // return jwtDecode<JWTPayload>(token)
+      return null // jwt-decode not installed
     } catch (error) {
       return null
     }

@@ -1,9 +1,8 @@
 'use client'
 
-import React from 'react'
 import { motion } from 'framer-motion'
-import { BarChart3, TrendingUp, Users, AlertTriangle, CheckCircle2, Brain } from 'lucide-react'
-import { LineChart, Line, AreaChart, Area, BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, PieChart, Pie, Cell } from 'recharts'
+import { BarChart3, Users, AlertTriangle, CheckCircle2, Brain } from 'lucide-react'
+import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, PieChart, Pie, Cell } from 'recharts'
 
 const containerVariants = {
   hidden: { opacity: 0 },

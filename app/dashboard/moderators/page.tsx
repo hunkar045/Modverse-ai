@@ -1,8 +1,8 @@
 'use client'
 
-import React, { useState } from 'react'
+import { useState } from 'react'
 import { motion } from 'framer-motion'
-import { UserPlus, Shield, Trash2, Edit } from 'lucide-react'
+import { UserPlus, Trash2, Edit } from 'lucide-react'
 
 const moderators = [
   {
@@ -38,7 +38,7 @@ const moderators = [
 ]
 
 export default function ModeratorsPage() {
-  const [showAddModal, setShowAddModal] = useState(false)
+  const [, setShowAddModal] = useState(false)
 
   return (
     <motion.div

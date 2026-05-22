@@ -6,7 +6,7 @@ export async function POST(request: NextRequest) {
   try {
     const actionData = await request.json()
 
-    const { userId, subredditId, postId, commentId, action, reason } = actionData
+    const { userId, subredditId, action } = actionData
 
     if (!userId || !subredditId || !action) {
       return NextResponse.json(
@@ -35,7 +35,7 @@ export async function POST(request: NextRequest) {
   }
 }
 
-export async function GET(request: NextRequest) {
+export async function GET() {
   try {
     // TODO: Fetch moderation actions from database
     return NextResponse.json(

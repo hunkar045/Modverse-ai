@@ -4,7 +4,7 @@ import { NextRequest, NextResponse } from 'next/server'
 
 export async function POST(request: NextRequest) {
   try {
-    const { question, context } = await request.json()
+    const { question } = await request.json()
 
     if (!question) {
       return NextResponse.json(

@@ -1,8 +1,8 @@
 'use client'
 
-import React, { useState } from 'react'
+import { useState } from 'react'
 import { motion } from 'framer-motion'
-import { AlertCircle, AlertTriangle, Bell, X } from 'lucide-react'
+import { AlertTriangle, Bell, X } from 'lucide-react'
 
 const alerts = [
   {
@@ -59,21 +59,6 @@ export default function AlertsPage() {
     setResolvedAlerts(prev =>
       prev.includes(id) ? prev.filter(x => x !== id) : [...prev, id]
     )
-  }
-
-  const getSeverityColor = (severity: string) => {
-    switch (severity) {
-      case 'critical':
-        return 'from-toxicity-red to-warning-amber'
-      case 'high':
-        return 'from-warning-amber to-toxicity-red'
-      case 'medium':
-        return 'from-ai-purple to-ai-blue'
-      case 'low':
-        return 'from-positive-green to-ai-lime'
-      default:
-        return 'from-ai-purple to-ai-blue'
-    }
   }
 
   return (

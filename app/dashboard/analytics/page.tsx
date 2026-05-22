@@ -1,9 +1,7 @@
 'use client'
 
-import React from 'react'
 import { motion } from 'framer-motion'
-import { AlertTriangle, TrendingDown, Users, MessageSquare } from 'lucide-react'
-import { LineChart, Line, BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, Radar } from 'recharts'
+import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, Radar } from 'recharts'
 
 const toxicityByHour = [
   { hour: '12 AM', toxicity: 15 },
@@ -135,7 +133,7 @@ export default function AnalyticsPage() {
                   className="flex items-center gap-3"
                 >
                   <div className="flex-1">
-                    <div className="text-sm font-medium mb-1">{item.rule || item.action}</div>
+                    <div className="text-sm font-medium mb-1">{('rule' in item ? item.rule : item.action)}</div>
                     <div className="w-full bg-space-light rounded-full h-2">
                       <motion.div
                         initial={{ width: 0 }}
